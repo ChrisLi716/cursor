@@ -394,11 +394,15 @@ alwaysApply: false  # 是否总是应用
 
 
 
+### 快捷键
 
+#### 格式化快快捷键设置
 
-```
-https://mp.weixin.qq.com/s/NyQYJ48kSK1u9A1SWNVO4Q
-https://mp.weixin.qq.com/s/jIWRYMi0zsFB03sGMA_QyQ
-https://mp.weixin.qq.com/s/HfKBx773I7sADKBJP9UuXg
-```
+>按 Ctrl + Shift + P 打开命令面板
+>输入 "Preferences: Open Keyboard Shortcuts"
+>搜索 "Format Selection" 查看是否有关联的快捷键
+>
+>将快捷键修改为: `ctrl+alt+l`
+>
+>整个文件格式化快捷键: `Shift + Alt + F`
 
