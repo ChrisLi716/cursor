@@ -199,7 +199,7 @@ ctrl+l 打开对话对整个文件操作
 
 #### 全局忽略文件
 
-> setting-> User -> Cursor -> General:Global Cursor Ignore List
+> Setting-> User -> Cursor -> General:Global Cursor Ignore List
 
 
 
