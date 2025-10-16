@@ -2,6 +2,7 @@ package com.example.java8;
 
 import java.util.*;
 import java.util.function.*;
+import java.util.stream.*;
 
 /**
  * Java 8 Optional 示例类
@@ -29,8 +30,8 @@ public class OptionalExamples {
         // 检查是否有值
         System.out.println("emptyOptional.isPresent(): " + emptyOptional.isPresent());
         System.out.println("presentOptional.isPresent(): " + presentOptional.isPresent());
-        System.out.println("emptyOptional.isEmpty(): " + emptyOptional.isEmpty());
-        System.out.println("presentOptional.isEmpty(): " + presentOptional.isEmpty());
+        System.out.println("emptyOptional.isEmpty(): " + !emptyOptional.isPresent());
+        System.out.println("presentOptional.isEmpty(): " + !presentOptional.isPresent());
     }
     
     /**
@@ -116,16 +117,19 @@ public class OptionalExamples {
         optional.ifPresent(value -> System.out.println("  值存在: " + value));
         emptyOptional.ifPresent(value -> System.out.println("  这个不会执行"));
         
-        // ifPresentOrElse() - 如果有值执行一个操作，否则执行另一个操作
+        // ifPresentOrElse() - 如果有值执行一个操作，否则执行另一个操作（Java 9+ 特性，这里用替代方案）
         System.out.println("ifPresentOrElse() 示例:");
-        optional.ifPresentOrElse(
-            value -> System.out.println("  值存在: " + value),
-            () -> System.out.println("  值不存在")
-        );
-        emptyOptional.ifPresentOrElse(
-            value -> System.out.println("  这个不会执行"),
-            () -> System.out.println("  值不存在，执行默认操作")
-        );
+        if (optional.isPresent()) {
+            System.out.println("  值存在: " + optional.get());
+        } else {
+            System.out.println("  值不存在");
+        }
+        
+        if (emptyOptional.isPresent()) {
+            System.out.println("  这个不会执行");
+        } else {
+            System.out.println("  值不存在，执行默认操作");
+        }
     }
     
     /**
