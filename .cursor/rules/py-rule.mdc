@@ -1,0 +1,12 @@
+---
+description: 规则的描述说明
+globs: ["**/*.py", "**/*.ipynb"]  # 应用的文件模式
+alwaysApply: false  # 是否总是应用
+---
+
+# 这里是具体的规则内容
+
+1. 所有 Python 代码输出为 JSON 格式
+2. 使用 type hints 进行类型注解
+3. 添加详细的 docstring 文档
+4. 遵循 PEP 8 编码规范
