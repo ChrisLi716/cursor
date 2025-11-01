@@ -1,7 +1,12 @@
 Here’s how to actually use it right:
 
 1. Set 5-10 clear project rules upfront so Cursor knows your structure and constraints. Try /generate rules for existing codebases.
+    /generate命令快速生成项目的rules， 可以参考：https://github.com/PatrickJS/awesome-cursorrules
+    让AI 不要过度聪明在圈定的范围内做事
+
 2. Be specific in prompts. Spell out tech stack, behavior, and constraints like a mini spec.
+    可以让cursor先将自己的自然语言转化为结构化的提示词，再将提示词喂给cursor
+
 3. Work file by file; generate, test, and review in small, focused chunks.
 4. Write tests first, lock them, and generate code until all tests pass.
 5. Always review AI output and hard‑fix anything that breaks, then tell Cursor to use them as examples.
@@ -11,7 +16,7 @@ Here’s how to actually use it right:
 9. Use chat history to iterate on old prompts without starting over.
 10. Choose models intentionally. Gemini for precision, Claude for breadth.
 11. In new or unfamiliar stacks, paste in link to documentation. Make Cursor explain all errors and fixes line by line.
-12.Let big projects index overnight and limit context scope to keep performance snappy.
+12. Let big projects index overnight and limit context scope to keep performance snappy.
 
 Structure and control wins (for now)
 Treat Cursor agent like a powerful junior — it can go far, fast, if you show it the way
